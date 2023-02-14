@@ -5,13 +5,18 @@ import java.util.List;
 public class Klassen {
     public static void main(String[] args) {
         // Ein neues Objekt vom Typ City erzeugen:
+        City c1 = new City();
 
 
         // Die Attribute der Stadt mit Werten belegen:
+        c1.name = "Mannheim";
+        c1.distance = 0;
 
 
         // Ein weiteres Objekt erzeugen, dieses Mal mit dessen Konstruktor:
-        
+        City c2 = new City();
+        c2.name = "Hamburg";
+        c2.distance = 568;
 
         // Noch ein paar Städte:
         

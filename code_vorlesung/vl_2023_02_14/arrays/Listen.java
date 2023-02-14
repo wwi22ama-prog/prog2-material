@@ -1,24 +1,35 @@
 package code_vorlesung.vl_2023_02_14.arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Listen {
     public static void main(String[] args) {
         // Eine Liste von Zahlen erzeugen:
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
         
 
         // Über die Zahlen iterieren und sie ausgeben:
+        for (int i = 0; i<numbers.size(); i++) {
+            System.out.printf("%d ", numbers.get(i));
+        }
+        System.out.println();
         
 
         // ... oder per Funktion:
-        
+        printList(numbers);
 
         // Die Primzahlen aus numbers heraussammeln und ausgeben:
-        
+        for (var n : numbers) {
+            if (isPrime(n)) {
+                System.out.printf("%d ", n);
+            }
+        }
+        System.out.println();
 
         // Eine Liste von Strings erzeugen und ein paar Werte hinzufügen:
-        List<String> cities  = new ArrayList<>();
+        List<String> cities  = new ArrayList<>(Arrays.asList("Mannheim", "Hamburg", "München"));
         
 
         // Die Liste ausgeben:
@@ -39,7 +50,11 @@ public class Listen {
      * @param list Die auszugebende Liste.
      */
     public static <T> void printList(List<T> list) {
-        // TODO
+        for (var element : list) {
+            System.out.print(element);
+            System.out.print(" ");
+        }
+        System.out.println();
     }
 
     /**
@@ -60,7 +75,14 @@ public class Listen {
      * @return true, falls n eine Primzahl ist, ansonsten false.
      */
     public static boolean isPrime(int n) {
-        // TODO
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
         return true;
     }
 }
