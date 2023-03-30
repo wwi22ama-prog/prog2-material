@@ -48,4 +48,20 @@ public class Element {
         }
         right.insert(de, en);
     }
+
+    public String inOrder() {
+
+        String leftstring = (left != null) ? left.inOrder() : "";
+        String rootstring = this.toString();
+        String rightstring = (right != null) ? right.inOrder() : "";
+
+        return String.format("%s%s\n%s", leftstring, rootstring, rightstring);
+
+        /* Alternative Schreibweise
+        String leftstring = "";
+        if (left != null) {
+            leftstring = left.inOrder();
+        }
+        */
+    }
 }

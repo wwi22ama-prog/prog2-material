@@ -21,5 +21,7 @@ public class Main {
         System.out.println(root.right.right.right);
         System.out.println(root.right.left);
         System.out.println();
+
+        System.out.println(root.inOrder());
     }
 }
