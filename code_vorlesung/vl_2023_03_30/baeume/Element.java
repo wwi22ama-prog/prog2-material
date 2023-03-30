@@ -26,6 +26,26 @@ public class Element {
      *  mit diesen Werten in den binären Suchbaum ein.
      */
     public void insert(String de, String en) {
-        // TODO
+        if (de.compareTo(this.de) < 0) {
+            insertLeft(de, en);
+        } else {
+            insertRight(de, en);
+        }
+    }
+
+    private void insertLeft(String de, String en) {
+        if (left == null) {
+            left = new Element(de, en);
+            return ;
+        }
+        left.insert(de, en);
+    }
+
+    private void insertRight(String de, String en) {
+        if (right == null) {
+            right = new Element(de, en);
+            return ;
+        }
+        right.insert(de, en);
     }
 }
