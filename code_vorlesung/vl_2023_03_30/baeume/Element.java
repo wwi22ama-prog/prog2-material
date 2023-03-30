@@ -64,4 +64,18 @@ public class Element {
         }
         */
     }
+
+    public String graph() {
+
+        String start = this.toString() + " --> ";
+        String leftstring = (left != null) ? start + left.toString() : "";
+        String rightstring = (right != null) ? start + right.toString() : "";
+
+        return String.format("%s\n%s\n%s%s",
+            leftstring,
+            rightstring,
+            left != null ? left.graph() : "",
+            right != null ? right.graph() : ""
+        );
+    }
 }

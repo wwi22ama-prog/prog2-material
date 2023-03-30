@@ -22,6 +22,15 @@ public class Main {
         System.out.println(root.right.left);
         System.out.println();
 
-        System.out.println(root.inOrder());
+        System.out.println(root.graph());
+
+        /*
+         Haus:house --> Fahrrad:bicycle
+         Haus:house --> Sonne:sun
+         Sonne:sun --> Holz:wood
+         
+         Sonne:sun --> Wald:forest
+
+         */
     }
 }
